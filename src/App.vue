@@ -40,6 +40,7 @@
       dark
       app
       src="https://picsum.photos/1920/1080?random"
+      prominent
       
     >
       <template v-slot:img="{ props }">
@@ -51,7 +52,7 @@
 
       <v-app-bar-nav-icon  @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Vuetify</v-app-bar-title>
+      <v-app-bar-title class="text-no-wrap">Task List</v-app-bar-title>
 
       <v-spacer></v-spacer>
 

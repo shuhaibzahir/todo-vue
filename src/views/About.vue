@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>About the task list</h1>
+    <p>this is very interest to say that. we can add more tasks like this</p>
   </div>
 </template>

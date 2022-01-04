@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
- 
+import Main from "../views/Todo.vue"
 Vue.use(VueRouter)
 
 const routes = [
-   
+   {
+     path:'/',
+     name:'Main',
+     component:Main
+   },
   {
     path: '/about',
     name: 'About',

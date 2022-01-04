@@ -1,5 +1,15 @@
 <template>
-  <v-list class="pt-0" flat>
+    <div class="pa-3"> 
+    <v-text-field
+    class="pa-3"
+           outlined
+            label="Wnter new Task"
+            append-icon="mdi-plus-circle"
+            hide-details=""
+          >
+          </v-text-field>
+   <v-list class="pt-0" flat>
+    
     <v-list-item-group v-model="settings" multiple>
       <div v-for="task of tasks" :key="task.id">
         <v-list-item @click="doneTask(task.id)" :class="{'blue lighten-5':task.done}">
@@ -11,7 +21,7 @@
               <v-list-item-title :class="{'text-decoration-line-through':task.done}">{{ task.title }}</v-list-item-title>
             </v-list-item-content>
               <v-list-item-action>
-          <v-btn icon  @click="deleteTask(task.id)">
+          <v-btn icon  @click.stop="deleteTask(task.id)">
             <v-icon color="red accent-3" >mdi-delete-alert</v-icon>
           </v-btn>
         </v-list-item-action>
@@ -21,6 +31,7 @@
       </div>
     </v-list-item-group>
   </v-list>
+    </div>
 </template>
 
 <script>

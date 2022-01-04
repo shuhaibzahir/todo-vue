@@ -7,7 +7,8 @@
             append-icon="mdi-plus-circle"
             hide-details
             clearable
-            @click:append="addTask()"
+            @keypress.enter="addTask"
+            @click:append="addTask"
             v-model="newTask"
           >
           </v-text-field>

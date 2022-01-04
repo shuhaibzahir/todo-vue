@@ -2,10 +2,13 @@
     <div class="pa-3"> 
     <v-text-field
     class="pa-3"
-           outlined
+            outlined
             label="Wnter new Task"
             append-icon="mdi-plus-circle"
-            hide-details=""
+            hide-details
+            clearable
+            @click:append="addTask()"
+            v-model="newTask"
           >
           </v-text-field>
    <v-list class="pt-0" flat>
@@ -39,13 +42,14 @@ export default {
   name: "Todo",
   data() {
     return {
+        newTask:'',
       tasks: [
-        { id: 1, title: "wake up", done:false },
-        { id: 2, title: "meditation", done:false },
-        { id: 3, title: "read book", done:false },
-        { id: 4, title: "Task creation", done:false },
-        { id: 5, title: "Calender checking", done:false },
-        { id: 6, title: "Start working", done:false },
+        // { id: 1, title: "wake up", done:false },
+        // { id: 2, title: "meditation", done:false },
+        // { id: 3, title: "read book", done:false },
+        // { id: 4, title: "Task creation", done:false },
+        // { id: 5, title: "Calender checking", done:false },
+        // { id: 6, title: "Start working", done:false },
       ],
     };
   },
@@ -57,8 +61,24 @@ export default {
       deleteTask(id){
           if(confirm('are you sure?')){
               this.tasks = this.tasks.filter(i=>i.id!==id)
+            // localStorage.setItem('taskList',JSON.stringify(this.tasks))
+
+              
           } 
+      },
+      addTask(){
+          this.tasks.push({id:Date.now(), title:this.newTask, done:false})
+        //   localStorage.setItem('taskList',JSON.stringify(this.tasks))
+        this.newTask=''
       }
+  },
+  mounted(){
+      let getItem = localStorage.getItem("taskList")
+      this.tasks = getItem?JSON.parse(getItem):[]
+
+  },
+  updated(){
+    localStorage.setItem('taskList',JSON.stringify(this.tasks))
   }
 
 };

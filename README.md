@@ -1,7 +1,7 @@
 # todo-vue
 
 # demo
-https://todo-vue-3nse3n6sf-shuhaibzahir.vercel.app/
+https://todo-vue-8q9ctqde8-shuhaibzahir.vercel.app/
 
 ## Project setup
 ```

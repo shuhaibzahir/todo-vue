@@ -13,7 +13,7 @@
           </v-text-field>
    <v-list class="pt-0" flat>
     
-    <v-list-item-group v-model="settings" multiple>
+    <v-list-item-group >
       <div v-for="task of tasks" :key="task.id">
         <v-list-item @click="doneTask(task.id)" :class="{'blue lighten-5':task.done}">
           <template v-slot:default>
@@ -42,15 +42,8 @@ export default {
   name: "Todo",
   data() {
     return {
-        newTask:'',
-      tasks: [
-        // { id: 1, title: "wake up", done:false },
-        // { id: 2, title: "meditation", done:false },
-        // { id: 3, title: "read book", done:false },
-        // { id: 4, title: "Task creation", done:false },
-        // { id: 5, title: "Calender checking", done:false },
-        // { id: 6, title: "Start working", done:false },
-      ],
+      newTask:'',
+      tasks: [  ],
     };
   },
   methods:{

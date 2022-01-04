@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" app>
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="text-h6"> Vuetify Todo </v-list-item-title>
+          <v-list-item-title class="text-h6">Task Manager </v-list-item-title>
           <v-list-item-subtitle> The Best Todo for ever! </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
@@ -28,7 +28,7 @@
       dark
       app
       src="https://picsum.photos/1920/1080?random"
-      prominent
+       
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -59,5 +59,6 @@ export default {
       { title: "About", icon: "mdi-help-box", to: "/about" },
     ],
   }),
+ 
 };
 </script>

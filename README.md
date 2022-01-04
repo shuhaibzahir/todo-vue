@@ -1,5 +1,8 @@
 # todo-vue
 
+# demo
+https://todo-vue-3nse3n6sf-shuhaibzahir.vercel.app/
+
 ## Project setup
 ```
 npm install
@@ -14,6 +17,4 @@ npm run serve
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ 

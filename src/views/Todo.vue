@@ -3,8 +3,7 @@
     <v-text-field
     class="pa-3"
             outlined
-            label="Wnter new Task"
-            append-icon="mdi-plus-circle"
+             append-icon="mdi-plus-circle"
             hide-details
             clearable
             @keypress.enter="addTask"
